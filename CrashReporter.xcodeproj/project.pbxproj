@@ -705,17 +705,17 @@
 		05E748B317616D6B009B8745 /* dwarf_stack_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05E748B217616D6B009B8745 /* dwarf_stack_tests.mm */; };
 		05E748B417616D6B009B8745 /* dwarf_stack_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05E748B217616D6B009B8745 /* dwarf_stack_tests.mm */; };
 		05E748B517616D6B009B8745 /* dwarf_stack_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05E748B217616D6B009B8745 /* dwarf_stack_tests.mm */; };
-		05EB2AF715B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
-		05EB2AF815B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
-		05EB2AF915B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
-		05EB2AFA15B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
+		05EB2AF715B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
+		05EB2AF815B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
+		05EB2AF915B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
+		05EB2AFA15B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
 		05EB2AFD15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
 		05EB2AFE15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
 		05EB2AFF15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
 		05EB2B0015B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
-		05EB2B0315B45DD00066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
-		05EB2B0415B45DD90066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
-		05EB2B0515B45DE00066EB4D /* PLCrashAsyncThread_current.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */; };
+		05EB2B0315B45DD00066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
+		05EB2B0415B45DD90066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
+		05EB2B0515B45DE00066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */; };
 		05EB2B0A15B498880066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
 		05EB2B0B15B4988B0066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
 		05EB2B0C15B4988E0066EB4D /* PLCrashAsyncThread_current.c in Sources */ = {isa = PBXBuildFile; fileRef = 05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */; };
@@ -1401,7 +1401,7 @@
 		05E748A517616D30009B8745 /* dwarf_stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dwarf_stack.cpp; sourceTree = "<group>"; };
 		05E748A617616D30009B8745 /* dwarf_stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dwarf_stack.hpp; sourceTree = "<group>"; };
 		05E748B217616D6B009B8745 /* dwarf_stack_tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dwarf_stack_tests.mm; sourceTree = "<group>"; };
-		05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = PLCrashAsyncThread_current.S; sourceTree = "<group>"; };
+		05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = PLCrashAsyncThread_current_assembler.S; sourceTree = "<group>"; };
 		05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PLCrashAsyncThread_current.c; sourceTree = "<group>"; };
 		05EB2B0115B459770066EB4D /* PLCrashAsyncThread_current_defs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLCrashAsyncThread_current_defs.h; sourceTree = "<group>"; };
 		05EB2B0D15B6FDA70066EB4D /* PLCrashReporterNSError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReporterNSError.h; sourceTree = "<group>"; };
@@ -2150,7 +2150,7 @@
 		05EB2B0215B4597B0066EB4D /* Current Thread Trampoline */ = {
 			isa = PBXGroup;
 			children = (
-				05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current.S */,
+				05EB2AF615B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S */,
 				05EB2AFC15B456750066EB4D /* PLCrashAsyncThread_current.c */,
 				05EB2B0115B459770066EB4D /* PLCrashAsyncThread_current_defs.h */,
 			);
@@ -3090,7 +3090,7 @@
 				05BB83F41364AD3E00D53B84 /* PLCrashReportMachineInfo.m in Sources */,
 				0576DAA21B3E0856000BCA73 /* AsyncAllocatable.cpp in Sources */,
 				05BB84891364EDF200D53B84 /* PLCrashSysctl.c in Sources */,
-				05EB2AF915B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2AF915B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				05EB2AFF15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				05EB2B1515B6FDA80066EB4D /* PLCrashReporterNSError.m in Sources */,
 				05F76DD5162F213E00A668C7 /* PLCrashAsyncMachOImage.c in Sources */,
@@ -3161,7 +3161,7 @@
 				05BB83F61364AD3E00D53B84 /* PLCrashReportMachineInfo.m in Sources */,
 				0576DAA31B3E0856000BCA73 /* AsyncAllocatable.cpp in Sources */,
 				05BB848B1364EDF200D53B84 /* PLCrashSysctl.c in Sources */,
-				05EB2AFA15B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2AFA15B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				05EB2B0015B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				05EB2B1615B6FDA80066EB4D /* PLCrashReporterNSError.m in Sources */,
 				05F76DD6162F213E00A668C7 /* PLCrashAsyncMachOImage.c in Sources */,
@@ -3217,7 +3217,7 @@
 				059666E30EEDDFCC008A0601 /* PLCrashFrameWalkerTests.m in Sources */,
 				0596702E0EEF6B51008A0601 /* PLCrashLogWriterTests.m in Sources */,
 				059674880EF0BB4A008A0601 /* PLCrashLogWriter.m in Sources */,
-				05EB2B0315B45DD00066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2B0315B45DD00066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				0576DAED1B42F387000BCA73 /* shared_ptr_test.cpp in Sources */,
 				05EB2B0C15B4988E0066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				0596748E0EF0BB63008A0601 /* PLCrashFrameWalker.c in Sources */,
@@ -3331,7 +3331,7 @@
 				059666E50EEDDFCC008A0601 /* PLCrashFrameWalkerTests.m in Sources */,
 				0596702F0EEF6B51008A0601 /* PLCrashLogWriterTests.m in Sources */,
 				059674890EF0BB4D008A0601 /* PLCrashLogWriter.m in Sources */,
-				05EB2B0415B45DD90066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2B0415B45DD90066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				05EB2B0B15B4988B0066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				0596748B0EF0BB5C008A0601 /* PLCrashFrameWalker.c in Sources */,
 				059674780EF0BA03008A0601 /* crash_report.proto in Sources */,
@@ -3443,7 +3443,7 @@
 				059666E40EEDDFCC008A0601 /* PLCrashFrameWalkerTests.m in Sources */,
 				059670300EEF6B51008A0601 /* PLCrashLogWriterTests.m in Sources */,
 				059674970EF0BBB4008A0601 /* PLCrashLogWriter.m in Sources */,
-				05EB2B0515B45DE00066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2B0515B45DE00066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				0576DAEF1B42F387000BCA73 /* shared_ptr_test.cpp in Sources */,
 				05EB2B0A15B498880066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				059674980EF0BBB4008A0601 /* PLCrashFrameWalker.c in Sources */,
@@ -3580,7 +3580,7 @@
 				05BB83D41364A77800D53B84 /* PLCrashReportProcessorInfo.m in Sources */,
 				05BB83F81364AD3E00D53B84 /* PLCrashReportMachineInfo.m in Sources */,
 				05BB848D1364EDF200D53B84 /* PLCrashSysctl.c in Sources */,
-				05EB2AF715B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2AF715B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				05EB2AFD15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				05EB2B1315B6FDA80066EB4D /* PLCrashReporterNSError.m in Sources */,
 				0576DABE1B41E227000BCA73 /* DynamicLoader.cpp in Sources */,
@@ -3661,7 +3661,7 @@
 				05BB83D21364A77800D53B84 /* PLCrashReportProcessorInfo.m in Sources */,
 				05BB83F21364AD3E00D53B84 /* PLCrashReportMachineInfo.m in Sources */,
 				05BB84871364EDF200D53B84 /* PLCrashSysctl.c in Sources */,
-				05EB2AF815B454DD0066EB4D /* PLCrashAsyncThread_current.S in Sources */,
+				05EB2AF815B454DD0066EB4D /* PLCrashAsyncThread_current_assembler.S in Sources */,
 				05EB2AFE15B456750066EB4D /* PLCrashAsyncThread_current.c in Sources */,
 				05EB2B1415B6FDA80066EB4D /* PLCrashReporterNSError.m in Sources */,
 				0576DABF1B41E227000BCA73 /* DynamicLoader.cpp in Sources */,
