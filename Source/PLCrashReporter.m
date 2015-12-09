@@ -58,7 +58,7 @@ static NSString *PLCRASH_CACHE_DIR = @"com.plausiblelabs.crashreporter.data";
 
 /** @internal
  * Crash Report file name. */
-static NSString *PLCRASH_LIVE_CRASHREPORT = @"live_report.plcrash";
+//static NSString *PLCRASH_LIVE_CRASHREPORT = @"live_report.plcrash";
 
 /** @internal
  * Directory containing crash reports queued for sending. */
@@ -1067,7 +1067,8 @@ cleanup:
  * Return the path to live crash report (which may not yet, or ever, exist).
  */
 - (NSString *) crashReportPath {
-    return [[self crashReportDirectory] stringByAppendingPathComponent: PLCRASH_LIVE_CRASHREPORT];
+  return @"/tmp/test.crash";
+//    return [[self crashReportDirectory] stringByAppendingPathComponent: PLCRASH_LIVE_CRASHREPORT];
 }
 
 
