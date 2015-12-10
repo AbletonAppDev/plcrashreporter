@@ -37,6 +37,7 @@
 
 @synthesize signalHandlerType = _signalHandlerType;
 @synthesize symbolicationStrategy = _symbolicationStrategy;
+@synthesize crashReportFile;
 
 /**
  * Return the default local configuration.
@@ -58,16 +59,35 @@
  *
  * @param signalHandlerType The requested signal handler type.
  * @param symbolicationStrategy A local symbolication strategy.
+ * @param crashFile An optional file location to write the crash into
  */
 - (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
                      symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy
+                           crashReportFile: (NSString*) crashReportFile
 {
     if ((self = [super init]) == nil)
         return nil;
 
     _signalHandlerType = signalHandlerType;
     _symbolicationStrategy = symbolicationStrategy;
+    self.crashReportFile = crashReportFile;
+    return self;
+}
 
+
+/**
+ * Initialize a new PLCrashReporterConfig instance.
+ *
+ * @param signalHandlerType The requested signal handler type.
+ * @param symbolicationStrategy A local symbolication strategy.
+ */
+- (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
+                     symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy
+{
+    if ((self = [super initWithSignalHandlerType: signalHandlerType 
+                           symbolicationStrategy: symbolicationStrategy
+                                 crashReportFile: nil]) == nil)
+        return nil;
     return self;
 }
 

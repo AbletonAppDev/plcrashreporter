@@ -154,12 +154,17 @@ typedef NS_OPTIONS(NSUInteger, PLCrashReporterSymbolicationStrategy) {
 - (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
                      symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy;
 
+- (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
+                     symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy
+                           crashReportFile: (NSString*) crashReportFile;
+
 /** The configured signal handler type. */
 @property(nonatomic, readonly) PLCrashReporterSignalHandlerType signalHandlerType;
 
 /** The configured symbolication strategy. */
 @property(nonatomic, readonly) PLCrashReporterSymbolicationStrategy symbolicationStrategy;
 
+/** The configured crash file location. */
+@property(retain) NSString* crashReportFile;
 
 @end
-
