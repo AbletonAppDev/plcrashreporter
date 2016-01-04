@@ -1067,7 +1067,11 @@ cleanup:
  * Return the path to live crash report (which may not yet, or ever, exist).
  */
 - (NSString *) crashReportPath {
-    return [[self crashReportDirectory] stringByAppendingPathComponent: PLCRASH_LIVE_CRASHREPORT];
+  if (_config.crashReportFile) 
+  {
+    return _config.crashReportFile;
+  }
+  return [[self crashReportDirectory] stringByAppendingPathComponent: PLCRASH_LIVE_CRASHREPORT];
 }
 
 

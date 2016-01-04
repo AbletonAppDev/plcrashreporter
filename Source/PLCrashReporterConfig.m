@@ -37,6 +37,7 @@
 
 @synthesize signalHandlerType = _signalHandlerType;
 @synthesize symbolicationStrategy = _symbolicationStrategy;
+@synthesize crashReportFile = _crashReportFile;
 
 /**
  * Return the default local configuration.
@@ -50,7 +51,9 @@
  * is appropriate for use in release builds.
  */
 - (instancetype) init {
-    return [self initWithSignalHandlerType: PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy: PLCrashReporterSymbolicationStrategyNone];
+    return [self initWithSignalHandlerType: PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy: PLCrashReporterSymbolicationStrategyNone
+                 crashReportFile: nil
+            ];
 }
 
 /**
@@ -62,11 +65,28 @@
 - (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
                      symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy
 {
+    return [self initWithSignalHandlerType: signalHandlerType symbolicationStrategy: symbolicationStrategy
+                 crashReportFile: nil
+            ];
+}
+
+/**
+ * Initialize a new PLCrashReporterConfig instance.
+ *
+ * @param signalHandlerType The requested signal handler type.
+ * @param symbolicationStrategy A local symbolication strategy.
+ * @param crashReportFile A file to store the generated report into. You can pass nil
+ */
+- (instancetype) initWithSignalHandlerType: (PLCrashReporterSignalHandlerType) signalHandlerType
+                     symbolicationStrategy: (PLCrashReporterSymbolicationStrategy) symbolicationStrategy
+                           crashReportFile: (NSString*) crashReportFile
+{
     if ((self = [super init]) == nil)
         return nil;
 
     _signalHandlerType = signalHandlerType;
     _symbolicationStrategy = symbolicationStrategy;
+    _crashReportFile = [crashReportFile retain];
 
     return self;
 }
