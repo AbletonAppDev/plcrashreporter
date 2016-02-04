@@ -31,6 +31,23 @@
 
 #include <assert.h>
 
+// Backport for compiling with 10.7
+#ifndef NS_ENUM
+#if (__cplusplus && __cplusplus >= 201103L && (__has_extension(cxx_strong_enums) || __has_feature(objc_fixed_enum))) || (!__cplusplus && __has_feature(objc_fixed_enum))
+#define CF_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#if (__cplusplus)
+#define CF_OPTIONS(_type, _name) _type _name; enum : _type
+#else
+#define CF_OPTIONS(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+#else
+#define CF_ENUM(_type, _name) _type _name; enum
+#define CF_OPTIONS(_type, _name) _type _name; enum
+#endif
+#define NS_ENUM(_type, _name) CF_ENUM(_type, _name)
+#define NS_OPTIONS(_type, _name) CF_OPTIONS(_type, _name)
+#endif
+
 #if defined(__cplusplus)
 #   define PLCR_EXPORT extern "C"
 #   define PLCR_C_BEGIN_DECLS extern "C" {
@@ -133,7 +150,7 @@
  *
  * Otherwise, we have to use typedef-based static assertions.
  */
-#  if (defined(__cplusplus) && __cplusplus >= 201103L) || (!defined(__cplusplus) && defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L)
+#  if (__MAC_OS_X_VERSION_MIN_REQUIRED >= 1080) && ((defined(__cplusplus) && __cplusplus >= 201103L) || (!defined(__cplusplus) && defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L))
 #    define PLCR_ASSERT_STATIC_(name, cond, line) PLCR_ASSERT_STATIC__(#name, cond)
 #    define PLCR_ASSERT_STATIC__(name, cond) static_assert(cond, #name)
 #  else

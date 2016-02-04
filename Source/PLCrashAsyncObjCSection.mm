@@ -46,8 +46,9 @@
  * Executed in static initializers to determine whether the host uses the iOS 9+ ABI.
  */
 static bool plcrash_async_image_objc_has_ios9_abi () {
+    static bool is_ios9 = false;
+#ifndef TARGET_OS_MAC
     static dispatch_once_t onceToken;
-    static bool is_ios9;
     dispatch_once(&onceToken, ^{
         NSProcessInfo *procinfo = [NSProcessInfo processInfo];
         if (TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR && [procinfo respondsToSelector: @selector(operatingSystemVersion)] && procinfo.operatingSystemVersion.majorVersion >= 9) {
@@ -56,7 +57,7 @@ static bool plcrash_async_image_objc_has_ios9_abi () {
             is_ios9 = false;
         }
     });
-    
+#endif
     return is_ios9;
 };
 

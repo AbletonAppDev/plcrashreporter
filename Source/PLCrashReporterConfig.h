@@ -28,6 +28,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PLCrashFeatureConfig.h"
+#import "PLCrashMacros.h"
 
 /**
  * @ingroup enums
@@ -132,7 +133,7 @@ typedef NS_OPTIONS(NSUInteger, PLCrashReporterSymbolicationStrategy) {
      * it may return incorrect data should the runtime be changed incompatibly.
      */
     PLCrashReporterSymbolicationStrategyObjC = 1 << 1,
-    
+
     /**
      * Enable all available symbolication strategies.
      */
@@ -143,7 +144,7 @@ typedef NS_OPTIONS(NSUInteger, PLCrashReporterSymbolicationStrategy) {
 @private
     /** The configured signal handler type. */
     PLCrashReporterSignalHandlerType _signalHandlerType;
-    
+
     /** The configured symbolication strategy. */
     PLCrashReporterSymbolicationStrategy _symbolicationStrategy;
 
