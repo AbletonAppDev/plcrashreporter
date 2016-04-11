@@ -292,6 +292,7 @@
 #ifdef PLCR_PRIVATE
    /* If no prefix has been defined, we need to specify our own private prefix */
 #  ifndef PLCRASHREPORTER_PREFIX
+#    define PLCRASHREPORTER_PREFIX_SET_FOR_PROTOBUF
 #    define PLCRASHREPORTER_PREFIX PL_
 #  endif
 
@@ -311,4 +312,10 @@
 #  define protobuf_c_service_destroy                        PLNS(protobuf_c_service_destroy)
 #  define protobuf_c_service_generated_init                 PLNS(protobuf_c_service_generated_init)
 #  define protobuf_c_system_allocator                       PLNS(protobuf_c_system_allocator)
+
+#ifdef PLCRASHREPORTER_PREFIX_SET_FOR_PROTOBUF
+#  undef PLCRASHREPORTER_PREFIX_SET_FOR_PROTOBUF
+#  undef PLCRASHREPORTER_PREFIX
+#endif
+
 #endif /* PLCR_PRIVATE */
