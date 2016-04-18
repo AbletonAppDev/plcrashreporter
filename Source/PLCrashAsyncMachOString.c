@@ -26,7 +26,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include "PLCrashAsyncMachoString.h"
+#include "PLCrashAsyncMachOString.h"
 
 /**
  * @internal
@@ -46,10 +46,10 @@ plcrash_error_t plcrash_async_macho_string_init (plcrash_async_macho_string_t *s
     /* Save the task reference */
     string->task = task;
     mach_port_mod_refs(mach_task_self(), string->task, MACH_PORT_RIGHT_SEND, 1);
-    
+
     string->address = address;
     string->mobjIsInitialized = false;
-    
+
     return PLCRASH_ESUCCESS;
 }
 
@@ -62,7 +62,7 @@ plcrash_error_t plcrash_async_macho_string_init (plcrash_async_macho_string_t *s
 static plcrash_error_t plcrash_async_macho_string_read (plcrash_async_macho_string_t *string) {
     if (string->mobjIsInitialized)
         return PLCRASH_ESUCCESS;
-    
+
     pl_vm_address_t cursor = string->address;
 
     /* Map in the page containing the string, +1 up to one additional page. Short reads are permitted, as the next page
@@ -83,7 +83,7 @@ static plcrash_error_t plcrash_async_macho_string_read (plcrash_async_macho_stri
             err = plcrash_async_mobject_init(&string->mobj, string->task, string->address, page_count*PAGE_SIZE, false);
             if (err != PLCRASH_ESUCCESS)
                 return err;
-            
+
             p = plcrash_async_mobject_remap_address(&string->mobj, cursor, 0, 1);
             if (p == NULL) {
                 PLCF_DEBUG("Failed to remap additional space ...");
@@ -140,7 +140,7 @@ plcrash_error_t plcrash_async_macho_string_get_pointer (plcrash_async_macho_stri
 void plcrash_async_macho_string_free (plcrash_async_macho_string_t *string) {
     if (string->mobjIsInitialized)
         plcrash_async_mobject_free(&string->mobj);
-    
+
     /* Free the task reference */
     mach_port_mod_refs(mach_task_self(), string->task, MACH_PORT_RIGHT_SEND, -1);
 }
